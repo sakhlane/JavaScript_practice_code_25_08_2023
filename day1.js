@@ -21,6 +21,13 @@ console.log(a);
 {
     console.log(a); //a use with in a block level so its a global level 
     // it gives output as 1000
+  {
+        console.log('inner',a);
+        {
+          a = 5000; // re assaign to a same variable 
+            console.log('inner inner',a) // it also works inside a block also
+        }
+    }
 }
 
 // using let 
