@@ -78,12 +78,18 @@ var mStr = "This is my test string to practice the JavaScript string function co
 
 var mStr1 = "This is my test string to practice the JavaScript string function concepts. This is gonna be fun."
   // to find first sentence length
- mStr1.split('.');
+ console.log(mStr1.split('.')[0].length)
  
- 
- console.log(mStr1.indexOf('This',2))
-console.log(mStr1.lastIndexOf('This'))
-// console.log(mstr1.slice(76,80))
+//  2. Find the length of the second sentence in the string.
 
-// mstr1.substr(0,6);
-console.log(mStr1.substr('this').split('.').length)
+console.log(mStr1.split('.')[1].length)
+
+// 3. Find the first and last occurrence of the word "This".
+console.log(mStr1.indexOf('This'))
+console.log(mStr1.lastIndexOf('This'))
+
+// 4. Find the substring with length 12 from the START of the string mStr.
+ console.log(mStr1.substring(0,12));
+
+//  5. Find the substring with length 12 from the END of the string mStr.
+console.log(mStr1.substring(mStr1.length-1 -12))
