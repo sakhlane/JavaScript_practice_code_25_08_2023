@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map filter and reduce method </title>
+</head>
+<body>
+    <h1>map filter and reduce </h1>
+    <p>map filter and reduce are the array methods</p>
+    <script>
+        let arr = [1,2,3,4,5,6,7,8]
+    //     // for map
+    //     arr.map(function(values){
+    //         console.log(values + 10 )
+    //     })
+        
+    //     // for filter
+    //  let result =    arr.filter(function(val){
+    //         return val > 40 ;
+    //     })
+    // console.log(result); 
+    
+    // for reduce
+    let reduceMethod =  arr.reduce(function(accum,current){
+        return accum + current
+     })
+        console.log(reduceMethod);
+    </script>
+</body>
+</html>
