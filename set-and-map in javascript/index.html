@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map and sets</title>
+</head>
+<body>
+    <h1>set and maps in javascript</h1>
+
+    <script>
+        // set is not include or stored duplicates
+        let mySet = new Set(['apple','bannana','mango','pineapple'])
+        console.log(mySet);
+        mySet.add('lemon')
+       console.log(mySet.has('mango')) 
+
+       // map stored data in the form of value and pairs and it should be in the form of itirable 
+       let myMap = new Map([
+                            ["apple",500],
+                            ["bannana", 200],
+                            ["mango",300]
+                        ]);
+                        myMap.set("pineapple",400)
+                        console.log(myMap);
+            console.log(myMap.get('apple'));
+
+        // make fake api calls for map practice 
+        let api = new XMLHttpRequest();
+        console.log(api);
+
+        api.open('GET','https://jsonplaceholder.typicode.com/posts');
+        api.send();
+
+        api.onload = function(){
+            if(api.readyState === 4 && api.status === 200){
+                // console.log(api.response);
+               let result = JSON.parse(api.response)
+                console.log(result);
+              result.map(function(value){
+                console.log(value)
+                let itemid=value.id;
+                document.body.append(itemid)
+              })
+              
+
+            }
+        }
+    </script>
+</body>
+</html>
